@@ -3,7 +3,8 @@ CC		=	cc
 CFLAGS		=	-Wall -Wextra -Werror -g
 RM		=	rm -rf
 SRC		= compare error get_hundel operation_swap operation_swap_2 push_swaping check_input push
-SRCS		=	$(addsuffix .c, $(SRC))
+SRC_DIR		= 	srcs
+SRCS		=	$(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC)))
 OBJ_DIR		=	obj
 OBJS		=	$(addprefix $(OBJ_DIR)/, $(SRC:=.o))
 LIBFT_PATH	=	./libft
@@ -18,7 +19,7 @@ $(NAME):	$(OBJS) $(LIBFT)
 $(OBJ_DIR):
 			mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 			$(CC) $(CFLAGS) -c $< -o $@
 $(LIBFT):
 		make -C $(LIBFT_PATH) all
