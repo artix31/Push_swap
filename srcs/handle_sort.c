@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_hundel.c                                       :+:      :+:    :+:   */
+/*   hundle_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:19 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/08 03:45:21 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:13:33 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	check_last_3_a1(t_Intarr *a)
 {
 	if (a->arr[0] < a->arr[1] && a->arr[0] > a->arr[2])
 	{
-		rra(a);
+		rrx(a);
 		write(1, "rra\n", 4);
 		return (1);
 	}
@@ -34,19 +34,19 @@ int	check_last_3_a(t_Intarr *a)
 	if (a->arr[0] < a->arr[1] && a->arr[0] < a->arr[2] && a->arr[1] > a->arr[2])
 	{
 		sa(a);
-		ra(a);
+		rx(a);
 		write(1, "sa\nra\n", 6);
 		return (1);
 	}
 	if (a->arr[0] > a->arr[1] && a->arr[0] > a->arr[2] && a->arr[1] < a->arr[2])
 	{
-		ra(a);
+		rx(a);
 		write(1, "ra\n", 3);
 		return (1);
 	}
 	if (a->arr[0] > a->arr[1] && a->arr[0] > a->arr[2] && a->arr[1] > a->arr[2])
 	{
-		ra(a);
+		rx(a);
 		sa(a);
 		write(1, "ra\nsa\n", 6);
 		return (1);

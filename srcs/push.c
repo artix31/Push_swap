@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:44:15 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 04:39:21 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:00:40 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	go_to_work(t_Intarr *a, t_Intarr *b)
 	}
 	return (1);
 }
-/*directs handles, returns (0) on failure, and returns (1) on success*/
 
+/*directs handles, returns (0) on failure, and returns (1) on success*/
 int	go_to_handle(int argc, t_Intarr *a_main, char **str, char **argv)
 {
 	int	i;
@@ -64,6 +64,7 @@ int	go_to_handle(int argc, t_Intarr *a_main, char **str, char **argv)
 	return (1);
 }
 
+//frees and returns "error", used in case of error!!
 int	all_free_with_error(t_Intarr *a_main, t_Intarr *b, char **str, int argc)
 {
 	if (str)
@@ -84,6 +85,8 @@ int	all_free_with_error(t_Intarr *a_main, t_Intarr *b, char **str, int argc)
 	return (0);
 }
 
+//frees everything, as long as you call it,
+//put NULL if you don't want to call it
 int	all_free(t_Intarr *a_main, t_Intarr *b, char **str, int argc)
 {
 	if (str)
@@ -98,7 +101,6 @@ int	all_free(t_Intarr *a_main, t_Intarr *b, char **str, int argc)
 
 //start of the engine, allocates arrays,
 //creates copy, sends to handling, and then returns!!
-
 int	main(int argc, char **argv)
 {
 	t_Intarr	*a_main;

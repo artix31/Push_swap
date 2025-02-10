@@ -6,12 +6,14 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:01 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/08 03:45:03 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:07:43 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
+//sa (swap a): Swap the first 2 elements at the top of stack a.
+//Do nothing if there is only one or no elements.
 void	sa(t_Intarr *a)
 {
 	int	temp;
@@ -21,7 +23,9 @@ void	sa(t_Intarr *a)
 	a->arr[1] = temp;
 }
 
-void	rra(t_Intarr *a)
+//rrx (reverse rotate x(whether a or b)): Shift down all elements of stack x by 1.
+//The last element becomes the first one.
+void	rrx(t_Intarr *a)
 {
 	int	n;
 	int	i;
@@ -38,7 +42,9 @@ void	rra(t_Intarr *a)
 	a->arr[0] = first;
 }
 
-void	ra(t_Intarr *a)
+// rx (rotate a || rotate b): Shift up all elements of stack a/b by 1.
+//The first element becomes the last one, input the name of the stack.
+void	rx(t_Intarr *a)
 {
 	int	n;
 	int	i;
@@ -55,6 +61,8 @@ void	ra(t_Intarr *a)
 	a->arr[n - 1] = last;
 }
 
+//pb (push b): Take the first element at the top of a and put it at the top of b.
+//Do nothing if a is empty
 int	got_to_a(t_Intarr *a)
 {
 	t_Intarr	new_a;
@@ -76,6 +84,8 @@ int	got_to_a(t_Intarr *a)
 	return (1);
 }
 
+//pa (push a): Take the first element at the top of b and put it at the top of a.
+//Do nothing if b is empty.
 int	go_to_b(t_Intarr *b)
 {
 	t_Intarr	new_b;

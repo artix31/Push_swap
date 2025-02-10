@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:27 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/08 03:45:29 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:00:12 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	is_ascending(t_Intarr *a)
 	return (1);
 }
 
-int	is_reapet(t_Intarr *a)
+int	is_repeat(t_Intarr *a)
 {
 	int	i;
 	int	j;
@@ -50,7 +50,7 @@ int	check_error(t_Intarr *a)
 {
 	if (is_ascending(a))
 		return (1);
-	if (is_reapet(a))
+	if (is_repeat(a))
 	{
 		write(2, "Error\n", 6);
 		return (1);

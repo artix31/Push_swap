@@ -6,13 +6,14 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:45 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 04:36:00 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:00:28 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 #include <stdio.h>
 
+//frees an array, give arr and curr size(lower than or equals max size)
 void	ft_free(char **str, int i)
 {
 	int	j;
@@ -49,13 +50,13 @@ char	**copy(int argc, char **argv)
 	str[argc - 1] = NULL;
 	return (str);
 }
-/*Handles Atol (nbr > && < UL_MAX/UL_MIN)
-then rejects any nbr > || < Max_int/MIN_int,
-return 1 on Err, 0 on success*/
 
+//Handles Atol (nbr > && < UL_MAX/UL_MIN)
+//then rejects any nbr > || < Max_int/MIN_int,
+//return 1 on Err, 0 on success
 int	handle_atol(char *str)
 {
-	if (ft_atol(str) > max_val || ft_atol(str) < min_val)
+	if (ft_atol(str) >= MAX_VAL || ft_atol(str) < MIN_VAL)
 		return (1);
 	else
 		return (0);

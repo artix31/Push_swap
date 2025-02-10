@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:44:50 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/08 03:44:53 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:07:55 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int	back_to_a(t_Intarr *a, t_Intarr *b)
 	}
 	while (a->arr[a->size - 1] < a->arr[0])
 	{
-		rra(a);
+		rrx(a);
 		write(1, "rra\n", 4);
 	}
 	return (1);

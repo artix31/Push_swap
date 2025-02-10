@@ -6,15 +6,15 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 00:45:17 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 02:44:37 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 09:39:02 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long int ft_return_nbr(char *str, int i, int sign)
+long	int	ft_return_nbr(char *str, int i, int sign)
 {
-	long int nbr;
+	long int	nbr;
 
 	nbr = 0;
 	while ((str[i] != '\0') && (ft_isdigit(str[i]) == 1))
@@ -28,11 +28,12 @@ long int ft_return_nbr(char *str, int i, int sign)
 	else
 		return (nbr);
 }
+
 //Ascii to int, returns number on success or UL_MAX on error
-long int ft_atol(char *str)
+long	int	ft_atol(char *str)
 {
-	int i;
-	char sign;
+	int		i;
+	char	sign;
 
 	sign = '0';
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:46:00 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 04:40:49 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:08:11 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		get_small_a(t_Intarr *a);
 int		get_greater_b(t_Intarr *b);
 int		sum_operation(t_Intarr *a, t_Intarr *b, int lower, int greater);
 int		is_ascending(t_Intarr *a);
-int		is_reapet(t_Intarr *a);
+int		is_repeat(t_Intarr *a);
 int		compare_up(int lower, int greater, t_Intarr *a, t_Intarr *b);
 int		compare_down(int lower, int greater, t_Intarr *a, t_Intarr *b);
 int		check_error(t_Intarr *a);
@@ -61,8 +61,8 @@ void	ft_free(char **str, int i);
 void	search_operation(t_Intarr *a, t_Intarr *b,
 			int *i_lower, int *i_greater);
 void	sa(t_Intarr *a);
-void	ra(t_Intarr *a);
-void	rra(t_Intarr *a);
+void	rx(t_Intarr *a);
+void	rrx(t_Intarr *a);
 void	rr(t_Intarr *a, t_Intarr *b);
 void	rrr(t_Intarr *a, t_Intarr *b);
 void	go_to_greater(int lower, int greater, t_Intarr *a);

@@ -6,12 +6,13 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:09 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/08 03:45:11 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:07:33 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
+//prepares the number to be pushed to 'b'
 int	pb(t_Intarr *a, t_Intarr *b)
 {
 	t_Intarr	new_b;
@@ -36,6 +37,7 @@ int	pb(t_Intarr *a, t_Intarr *b)
 	return (1);
 }
 
+//prepares the number to be pushed to 'a'
 int	pa(t_Intarr *a, t_Intarr *b)
 {
 	t_Intarr	new_a;
@@ -59,16 +61,18 @@ int	pa(t_Intarr *a, t_Intarr *b)
 	return (1);
 }
 
+//rr : ra and rb at the same time.
 void	rr(t_Intarr *a, t_Intarr *b)
 {
-	ra(a);
-	ra(b);
+	rx(a);
+	rx(b);
 	write(1, "rr\n", 3);
 }
 
+//rrr : rra and rrb at the same time.
 void	rrr(t_Intarr *a, t_Intarr *b)
 {
-	rra(a);
-	rra(b);
+	rrx(a);
+	rrx(b);
 	write(1, "rrr\n", 4);
 }

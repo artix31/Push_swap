@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:34 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/08 03:45:37 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/10 13:07:04 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ int	compare_up(int lower, int greater, t_Intarr *a, t_Intarr *b)
 		}
 		while (lower)
 		{
-			ra(b);
+			rx(b);
 			lower--;
 			write(1, "rb\n", 3);
 		}
 		while (greater)
 		{
-			ra(a);
+			rx(a);
 			greater--;
 			write(1, "ra\n", 3);
 		}
@@ -55,12 +55,12 @@ int	compare_down(int lower, int greater, t_Intarr *a, t_Intarr *b)
 		}
 		while (lower--)
 		{
-			rra(b);
+			rrx(b);
 			write(1, "rrb\n", 4);
 		}
 		while (greater--)
 		{
-			rra(a);
+			rrx(a);
 			write(1, "rra\n", 4);
 		}
 		return (1);
@@ -74,7 +74,7 @@ void	go_to_greater(int lower, int greater, t_Intarr *a)
 	{
 		while (greater)
 		{
-			ra(a);
+			rx(a);
 			greater--;
 			write(1, "ra\n", 3);
 		}
@@ -84,7 +84,7 @@ void	go_to_greater(int lower, int greater, t_Intarr *a)
 		greater = a->size - greater;
 		while (greater)
 		{
-			rra(a);
+			rrx(a);
 			greater--;
 			write(1, "rra\n", 4);
 		}
@@ -97,7 +97,7 @@ void	compare_random(int lower, int greater, t_Intarr *a, t_Intarr *b)
 	{
 		while (lower)
 		{
-			ra(b);
+			rx(b);
 			lower--;
 			write(1, "rb\n", 3);
 		}
@@ -107,7 +107,7 @@ void	compare_random(int lower, int greater, t_Intarr *a, t_Intarr *b)
 		lower = b->size - lower;
 		while (lower)
 		{
-			rra(b);
+			rrx(b);
 			lower--;
 			write(1, "rrb\n", 4);
 		}
