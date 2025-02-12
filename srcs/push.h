@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:46:00 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 13:08:11 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/12 13:49:47 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int		got_to_a(t_Intarr *a);
 int		go_to_b(t_Intarr *b);
 int		back_to_a(t_Intarr *a, t_Intarr *b);
 int		handle_atol(char *str);
-int		go_to_handle(int argc, t_Intarr *a_main, char **str, char **argv);
-int		go_to_work(t_Intarr *a, t_Intarr *b);
+int		handler(int argc, t_Intarr *a_main, char **str, char **argv);
+int		engine_start(t_Intarr *a, t_Intarr *b);
 
 //void
 void	go_to_loop(t_Intarr *b, t_Intarr *a);

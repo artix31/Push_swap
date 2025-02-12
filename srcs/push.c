@@ -6,14 +6,14 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:44:15 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 13:00:40 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/12 13:52:00 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
 //initiates the engines (sorting Algorithms 2, 3, 4, 4++)
-int	go_to_work(t_Intarr *a, t_Intarr *b)
+int	engine_start(t_Intarr *a, t_Intarr *b)
 {
 	if (a->size == 2)
 	{
@@ -39,7 +39,7 @@ int	go_to_work(t_Intarr *a, t_Intarr *b)
 }
 
 /*directs handles, returns (0) on failure, and returns (1) on success*/
-int	go_to_handle(int argc, t_Intarr *a_main, char **str, char **argv)
+int	handler(int argc, t_Intarr *a_main, char **str, char **argv)
 {
 	int	i;
 
@@ -120,9 +120,9 @@ int	main(int argc, char **argv)
 		return (all_free_with_error(a_main, b, NULL, argc));
 	a_main->size = argc - 1;
 	str = copy(argc, argv);
-	if (!go_to_handle(argc, a_main, str, argv))
+	if (!handler(argc, a_main, str, argv))
 		return (all_free(a_main, b, str, argc));
-	go_to_work(a_main, b);
+	engine_start(a_main, b);
 	all_free(a_main, b, str, argc);
 	return (0);
 }

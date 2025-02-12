@@ -2,7 +2,9 @@ NAME		=	push_swap
 CC		=	cc
 CFLAGS		=	-Wall -Wextra -Werror -g
 RM		=	rm -rf
-SRC		= compare error handle_sort operation_swap operation_swap_2 push_swaping check_input push
+SRC		= compare error handle_sort swap_opertaion swap_opertaion \
+			push_swaping check_input bubble_sort push operation_write \
+
 SRC_DIR		= 	srcs
 SRCS		=	$(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC)))
 OBJ_DIR		=	obj
