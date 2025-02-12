@@ -6,7 +6,7 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:44:15 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/12 13:52:00 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:02:24 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ int	main(int argc, char **argv)
 	t_Intarr	*b;
 	char		**str;
 
+	if (ft_char_chk(argv, argc) == 0)
+		return (write(1, "Error\n", 6));
 	b = malloc(sizeof(t_Intarr));
 	if (!b)
 		return (all_free_with_error(NULL, b, NULL, argc));

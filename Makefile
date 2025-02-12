@@ -1,9 +1,9 @@
 NAME		=	push_swap
 CC		=	cc
-CFLAGS		=	-Wall -Wextra -Werror -g
+CFLAGS		=	-Wall -Wextra -Werror
 RM		=	rm -rf
-SRC		= compare error handle_sort swap_opertaion swap_opertaion \
-			push_swaping check_input bubble_sort push operation_write \
+SRC		= compare error handle_sort swap_operations swap_operations2 \
+			push_swaping check_input char_chk push \
 
 SRC_DIR		= 	srcs
 SRCS		=	$(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC)))
