@@ -6,12 +6,11 @@
 /*   By: amashhad <amashhad@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 03:45:45 by amashhad          #+#    #+#             */
-/*   Updated: 2025/02/10 13:00:28 by amashhad         ###   ########.fr       */
+/*   Updated: 2025/02/13 20:11:52 by amashhad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
-#include <stdio.h>
 
 //frees an array, give arr and curr size(lower than or equals max size)
 void	ft_free(char **str, int i)
